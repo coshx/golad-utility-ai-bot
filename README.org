@@ -1,0 +1,3 @@
+* Game of Life and Death Utility AI Bot
+** Running the bot
+- Run using `/path/to/python/python3 /path/to/repo/golad-utility-ai-bot/main.py`

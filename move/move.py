@@ -1,6 +1,5 @@
 from move.move_type import MoveType
 
-
 class Move:
 
     def __init__(self, move_type, target_point=None, sacrifice_points=None):
