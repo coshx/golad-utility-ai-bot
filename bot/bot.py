@@ -31,6 +31,13 @@ class Bot:
             ['.', 'l', 'l', '.'],
         ]
 
+        self.vertical_beehive = [
+            ['.', 'l', '.'],
+            ['l', '.', 'l'],
+            ['l', '.', 'l'],
+            ['.', 'l', '.'],
+        ]
+
 
     def make_move(self, game):
         """
@@ -166,7 +173,7 @@ class Bot:
             self.actions['expand_tub']['coordinate'] = self.find_cell_in_pattern('.', my_tubs.pop())
 
     def analyze_beehives(self):
-        beehive_occurrences = self.find_pattern_occurrences(self.beehive)
+        beehive_occurrences = self.find_pattern_occurrences(self.beehive) + self.find_pattern_occurrences(self.vertical_beehive)
 
         enemy_beehives = list(filter(self.enemy_ownership_filter, beehive_occurrences))
         if len(enemy_beehives) == 0:
